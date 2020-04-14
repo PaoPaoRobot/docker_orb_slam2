@@ -3,15 +3,15 @@ FROM ubuntu:16.04
 MAINTAINER robotics_qi<robotics_qi@sjtu.edu.cn>
 
 RUN	apt-get -y update && apt-get install -y \
-	libboost-all-dev \
-	cmake git \
-	libgoogle-glog-dev \
-	libeigen3-dev \
-	libsuitesparse-dev \
-	libgl1-mesa-dev \
-	libglew-dev \
-	libxkbcommon-x11-dev \
-  rm -rf /var/lib/apt/lists/*
+	  libboost-all-dev \
+	  cmake git \
+	  libgoogle-glog-dev \
+	  libeigen3-dev \
+	  libsuitesparse-dev \
+	  libgl1-mesa-dev \
+	  libglew-dev \
+	  libxkbcommon-x11-dev &&\
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
 RUN cd /opt \
